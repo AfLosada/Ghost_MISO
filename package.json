@@ -1,0 +1,15 @@
+{
+  "name": "ghost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "cd local && cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ghost-cli": "^1.25.3",
+    "cypress": "^13.3.1"
+  }
+}
