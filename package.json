@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress": "cd local && cypress open"
+    "cypress": "cd local && cypress open",
+    "ghost:start": "cd local && ghost start --no-setup-linux-user",
+    "ghost:doctor": "cd local && ghost doctor --no-setup-linux-user"
   },
   "author": "",
   "license": "ISC",
