@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:pages": "playwright test --ui tests/page.spec.ts"
+    "test:pages": "playwright test --ui"
   },
   "keywords": [],
   "author": "",
