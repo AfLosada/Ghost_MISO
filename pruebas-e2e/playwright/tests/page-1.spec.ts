@@ -4,7 +4,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto("http://localhost:2368/ghost/#/signin");
 });
 
-test.describe("Functionalities 1 and 2: Create and Edit pages", () => {
+test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
   test("and assert that the markdown card works", async ({ page }) => {
     await page.goto("http://localhost:2368/ghost");
     await page.getByRole("link", { name: "Pages", exact: true }).click();
