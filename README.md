@@ -8,7 +8,8 @@ This repo contains a package json to install ghost, please follow the instructio
 
 ## Steps 
 
-1. npm install
-2. npm run ghost:install
-3. npm run ghost:start
+1. `npm install`
+  1.1. If you want to retry the tests from scratch you can run `npm run ghost:uninstall` 
+2. `npm run ghost:install`
+3. `npm run ghost:start`
 
