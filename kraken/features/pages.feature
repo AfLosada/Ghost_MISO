@@ -41,7 +41,7 @@ Scenario: Programar una página para publicacion
   When I log in
   And I wait for a signal containing "publish page complete" for 45 seconds
   When I click on edit for the first page
-  Then I schedule a page to publish
+  Then I schedule a "page" to publish
   Then I return to editor
   Then I return to pages
   Then I filter by scheduled pages
@@ -52,10 +52,9 @@ Scenario: Programar una página para publicacion
 Scenario: Dejar Programar una página que fue programada para publicarse
   Given I navigate to page "http://localhost:2368/ghost/#/pages"
   When I log in
-  And I wait for a signal containing "schedule page complete" for 45 seconds
+  And I wait for a signal containing "schedule page complete" for 70 seconds
   When I click on edit for the first page
   Then I schedule a page to publish
   Then I return to editor
   Then I return to pages
   Then I filter by scheduled pages
-  Then I send a signal to user 5 containg "unschedule page complete"
