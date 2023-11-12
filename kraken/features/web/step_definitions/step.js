@@ -71,6 +71,11 @@ Then('I schedule a {string} to publish', async function (_) {
   await this.driver.$('div > div > div.gh-publish-cta > button').click()
 })
 
+Then('I unschedule the page', async function () {
+  await this.driver.$('section > header > section > button.gh-btn.gh-btn-editor.darkgrey.gh-unpublish-trigger').click()
+  await this.driver.$('div > div > div > div.gh-publish-confirmation > p > button').click()
+})
+
 Then('I filter by published pages', async function() {
   await this.driver.$('body > div.gh-app > div > main > section > div > header > section > div > div.gh-contentfilter-menu.gh-contentfilter-type').click()
   await this.driver.$('body > div > div > ul > :nth-child(3)').click()
@@ -158,7 +163,7 @@ const singup = async function (driver) {
   await driver.$('#name').setValue("Grupo 5")
   await driver.$('#email').setValue("nedrocoli@gmail.com")
   await driver.$('#password').setValue("12345678910")
-  await driver.$('button:contains("Create account & start publishing →)"').click()
+  await driver.$('#setup > button').click()
 }
 
 const login = async function (driver) {

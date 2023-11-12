@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
-  test("and assert that the markdown card works", async ({ page }) => {
+  test("GIVEN I can log in the page, WHEN I create a page and add the markdown card THEN it is saved into this new page", async ({ page }) => {
     await page.goto("http://localhost:2368/ghost");
     await page.getByRole("link", { name: "Pages", exact: true }).click();
     await page.getByRole("link", { name: "New page" }).click();
@@ -34,7 +34,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
     ).toBeTruthy();
   });
 
-  test("and assert that the editing function works", async ({ page }) => {
+  test("GIVEN I can log in AND I have created a page WHEN I edit it THEN the edition is persisted and saved", async ({ page }) => {
     await page.goto("http://localhost:2368/ghost/#/pages");
     await page
       .locator(
@@ -59,7 +59,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
     ).toBeTruthy();
   });
 
-  test("and publish one page immediately and check if it is published", async ({page}) => {
+  test("GIVEN I can log in AND I have create a page WHEN I publish one page immediately THEN I can check if it is published", async ({page}) => {
     await page.goto("http://localhost:2368/ghost/#/pages");
       await page.locator(
         "body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li:first-child",
@@ -75,7 +75,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
       expect(page.getByRole('link', { name: /asereje .* last published/ })).toBeTruthy()
   })
   
-  test("and publish one page and schedule it then check if it is scheduled", async ({page}) => {
+  test("GIVEN I can log in AND I have created a page WHEN I publish one page I can schedule THEN I check if it is scheduled", async ({page}) => {
     await page.goto("http://localhost:2368/ghost/#/pages");
       await page.locator(
         "body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li:first-child",
@@ -95,7 +95,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
       expect(page.getByRole('link', { name: /asereje .*/ })).toBeTruthy()
   })
 
-  test("and THEN unschedule it. check that there are no scheduled pages", async ({page}) => {
+  test("GIVEN I can log in AND I have created and scheduled a page WHEN I unscheduled it THEN there are not scheduled pages", async ({page}) => {
     await page.goto("http://localhost:2368/ghost/#/pages");
       await page.locator(
         "body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li:first-child",

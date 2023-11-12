@@ -13,6 +13,7 @@ This repo contains a package json to install ghost, please follow the instructio
 2. `npm run ghost:install`
 3. `npm run ghost:start`
 
-## Pruebas
+## Tests
 
 - [Playwright](./pruebas-e2e/playwright/README.md)
+- [Kraken](./kraken/README.md)
