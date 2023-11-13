@@ -17,3 +17,9 @@ This repo contains a package json to install ghost, please follow the instructio
 
 - [Playwright](./pruebas-e2e/playwright/README.md)
 - [Kraken](./kraken/README.md)
+
+## Miembros del equipo
+- Eduardo Benito Castro - e.benito@uniandes.edu.co
+- Andres Felie Losada - af.losada@uniandes.edu.co
+- Jhon Goyes
+- Andres pelaez Gaviria
