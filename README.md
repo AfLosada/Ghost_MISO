@@ -23,3 +23,7 @@ This repo contains a package json to install ghost, please follow the instructio
 - Andres Felie Losada - af.losada@uniandes.edu.co
 - Jhon Goyes
 - Andres pelaez Gaviria
+
+You should use this credentials in ghost:
+- email: nedrocoli@gmail.com
+- password: 12345678910
