@@ -171,3 +171,35 @@ const login = async function (driver) {
   await driver.$('#password').setValue("12345678910")
   await driver.$('button.login').click()
 }
+
+//Funcionalidad editar perfil 
+When('I click iconoPersonal', async function() {
+  let element = await this.driver.$('[class="gh-user-avatar relative"]');
+  return await element.click();
+})
+
+When('I click your profile', async function () {
+  let element = await this.driver.$('[data-test-nav="user-profile"]');
+  return await element.click();
+})
+
+When('I enter name actualizado {kraken-string}', async function (text) {
+  let element = await this.driver.$('#user-name');
+  return await element.setValue(text);
+})
+
+
+When('I click save', async function () {
+  let element = await this.driver.$('[data-test-save-button]');
+  return await element.click();
+})
+
+When('I enter new correo {kraken-string}', async function(text) {
+  let element = await this.driver.$('#user-email');
+  return await element.setValue(text);
+})
+
+When('I enter new slug {kraken-string}', async function(text) {
+  let element = await this.driver.$('#user-slug');
+  return await element.setValue(text);
+})
