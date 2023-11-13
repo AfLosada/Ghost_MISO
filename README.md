@@ -17,6 +17,7 @@ This repo contains a package json to install ghost, please follow the instructio
 
 - [Playwright](./pruebas-e2e/playwright/README.md)
 - [Cyptess - posts](./pruebas-e2e/cypress/readme.md)
+- [Cyptess - tags](./cypress/e2e/ghost_testing.cy.js)
 - [Kraken](./kraken/README.md)
 
 ## Miembros del equipo
