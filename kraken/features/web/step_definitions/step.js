@@ -171,3 +171,26 @@ const login = async function (driver) {
   await driver.$('#password').setValue("12345678910")
   await driver.$('button.login').click()
 }
+
+// TAG SECTION
+
+When('I sign in', async function () {
+  await singup(this.driver)
+})
+
+When('I log in', async function () {
+  const singupAvailble = !(await(this.driver.$('#setup')).error)
+  if (singupAvailble){
+    await singup(this.driver)
+    return
+  }
+  await login(this.driver)
+})
+
+When('I click on tags', async function () {
+  await this.driver.$('a[href="#/tags/"]').click()
+})
+
+When('I create a new page', async function () {
+  await this.driver.$('a[href="#/tags/new/"]').click()
+})
