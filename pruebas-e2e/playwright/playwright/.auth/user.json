@@ -2,10 +2,10 @@
   "cookies": [
     {
       "name": "ghost-admin-api-session",
-      "value": "s%3AZfIJmjOLobi1nkS4YzOEbXe8V-RhUc0j.cQuBkR2B0iFM0sTnRB5sdvkXuDZPOZBT3U%2BxRR8yFFg",
+      "value": "s%3AShNQE9hlXQa7fwCl8yrdtpnPAyaSCVOp.%2FrPZS%2B17D1lJcCdSkluyFo1GU3%2FUOdv2B9DtMCjg3%2FU",
       "domain": "localhost",
       "path": "/ghost",
-      "expires": 1716113044.472972,
+      "expires": 1716116833.964321,
       "httpOnly": true,
       "secure": false,
       "sameSite": "Lax"

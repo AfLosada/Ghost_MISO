@@ -1,4 +1,5 @@
 import { test as setup, expect } from "@playwright/test";
+import { login } from "../utils/login";
 
 const authFile = "playwright/.auth/user.json";
 
@@ -8,7 +9,7 @@ setup("authenticate", async ({ page }) => {
   await page.waitForTimeout(1000)
   if (page.url() === "http://localhost:2368/ghost/#/setup") {
     await login({page})
-    return
+    if (page.url() !== "http://localhost:2368/ghost/#/signin") return
   }
   await page.goto("http://localhost:2368/ghost/#/signin");
   await page.getByLabel("Email Address").fill("nedrocoli@gmail.com");
@@ -19,21 +20,3 @@ setup("authenticate", async ({ page }) => {
   await page.context().storageState({ path: authFile });
   await expect(page.getByRole('link', { name: 'Pages', exact: true })).toBeVisible();
 });
-
-const login = async ({ page }) => {
-  await page.goto('http://localhost:2368/ghost/');
-  await page.goto('http://localhost:2368/ghost/#/setup');
-  await page.getByPlaceholder('The Daily Awesome').click();
-  await page.getByPlaceholder('The Daily Awesome').fill('Title');
-  await page.getByPlaceholder('Jamie Larson').click();
-  await page.getByPlaceholder('Jamie Larson').press('CapsLock');
-  await page.getByPlaceholder('Jamie Larson').fill('G');
-  await page.getByPlaceholder('Jamie Larson').press('CapsLock');
-  await page.getByPlaceholder('Jamie Larson').fill('Grupo 5');
-  await page.getByPlaceholder('jamie@example.com').click();
-  await page.getByPlaceholder('jamie@example.com').fill('nedrocoli@gmail.com');
-  await page.getByPlaceholder('jamie@example.com').press('Tab');
-  await page.getByPlaceholder('At least 10 characters').click();
-  await page.getByPlaceholder('At least 10 characters').fill('12345678910');
-  await page.getByRole('button', { name: 'Create account & start publishing →' }).click();
-}

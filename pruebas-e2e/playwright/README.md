@@ -12,7 +12,8 @@
 2. Make sure you are in the folder pruebas-e2e/playwright, the same one where this README.md lives.
 3. `npm install`
 4. `npm run test:pages`
-5. Enable the tests you want to run, in this case it would be setupV5 & V5. Running them means clicking on the play button above the auth setup and the pagev4. 
+5. Enable the tests you want to run, in this case it would be setupV5 & V5. Running them means clicking on the play button above the auth setup and the pagev4.
+6. **IMPORTANT** Tests will most likely fail the first time you run them, so please try running them again a second time. Before running them again, please try running the authentication before. This is because it is setting up the authentication and playwright preloads the pages when it is setting up the tests.  
 
 ![step0](./images/step%200%20playwright.png)
 
