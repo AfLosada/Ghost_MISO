@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:pages": "playwright test --ui"
+    "test:pages": "playwright test --ui --trace on"
   },
   "keywords": [],
   "author": "",

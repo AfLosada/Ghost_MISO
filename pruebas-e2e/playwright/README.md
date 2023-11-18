@@ -4,6 +4,7 @@
 
 - node 18.18.x
 - FRESH ghost install. If you don't have it please follow the guide found [here](../../README.md)
+- There should be **NO** draft pages, if there are pages in the draft state, please publish them manually or do a clean ghost install.
 
 ## Testing version 5 
 ### Steps to run the tests
@@ -12,7 +13,7 @@
 2. Make sure you are in the folder pruebas-e2e/playwright, the same one where this README.md lives.
 3. `npm install`
 4. `npm run test:pages`
-5. Enable the tests you want to run, in this case it would be setupV5 & V5. Running them means clicking on the play button above the auth setup and the pagev4.
+5. Enable the tests you want to run, in this case it would be setupV5 & V5. Running them means clicking on the play button above the auth setup and the pagev5.
 6. **IMPORTANT** Tests will most likely fail the first time you run them, so please try running them again a second time. Before running them again, please try running the authentication before. This is because it is setting up the authentication and playwright preloads the pages when it is setting up the tests.  
 
 ![step0](./images/step%200%20playwright.png)
@@ -24,7 +25,8 @@
 2. Make sure you are in the folder pruebas-e2e/playwright, the same one where this README.md lives.
 3. `npm install`
 4. `npm run test:pages`
-5. Enable the tests you want to run, in this case it would be setupV4 & V4. 
+5. Enable the tests you want to run, in this case it would be setupV4 & V4. Running them means clicking on the play button above the auth setup and the pagev5.
+6. **IMPORTANT** Tests will most likely fail the first time you run them, so please try running them again a second time. Before running them again, please try running the authentication before. This is because it is setting up the authentication and playwright preloads the pages when it is setting up the tests.  
 
 ![step0](./images/step%200%20playwright.png)
 
