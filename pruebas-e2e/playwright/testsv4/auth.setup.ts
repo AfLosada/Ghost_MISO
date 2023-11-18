@@ -4,13 +4,13 @@ const authFile = "playwright/.auth/user.json";
 
 setup("authenticate", async ({ page }) => {
   // Perform authentication steps. Replace these actions with your own.
-  await page.goto("http://localhost:3002/ghost/")
+  await page.goto("http://3.15.201.251/ghost/")
   await page.waitForTimeout(1000)
-  if (page.url() === "http://localhost:3002/ghost/#/setup") {
+  if (page.url() === "http://3.15.201.251/ghost/#/setup") {
     await login({page})
     return
   }
-  await page.goto("http://localhost:3002/ghost/#/signin");
+  await page.goto("http://3.15.201.251/ghost/#/signin");
   await page.getByPlaceholder('jamie@example.com').fill("nedrocoli@gmail.com");
   await page.getByPlaceholder('•••••••••••••••').fill("12345678910");
   await page.waitForTimeout(100);
@@ -21,8 +21,8 @@ setup("authenticate", async ({ page }) => {
 });
 
 const login = async ({ page }) => {
-  await page.goto('http://localhost:3002/ghost/');
-  await page.goto('http://localhost:3002/ghost/#/setup');
+  await page.goto('http://3.15.201.251/ghost/');
+  await page.goto('http://3.15.201.251/ghost/#/setup');
   await page.getByPlaceholder('The Daily Awesome').click();
   await page.getByPlaceholder('The Daily Awesome').fill('Title');
   await page.getByPlaceholder('Jamie Larson').click();

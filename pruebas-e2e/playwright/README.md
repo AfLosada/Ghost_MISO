@@ -12,7 +12,9 @@
 2. Make sure you are in the folder pruebas-e2e/playwright, the same one where this README.md lives.
 3. `npm install`
 4. `npm run test:pages`
-5. Click on the tests called V5 and run them
+5. Enable the tests you want to run, in this case it would be setupV5 & V5. Running them means clicking on the play button above the auth setup and the pagev4. 
+
+![step0](./images/step%200%20playwright.png)
 
 ## Testing version 4
 ### Steps to run the tests
@@ -21,10 +23,12 @@
 2. Make sure you are in the folder pruebas-e2e/playwright, the same one where this README.md lives.
 3. `npm install`
 4. `npm run test:pages`
-5. Click on the tests called V4 and run them
+5. Enable the tests you want to run, in this case it would be setupV4 & V4. 
+
+![step0](./images/step%200%20playwright.png)
 
 ### If you cannot see any playwright tests in the ui
-1. Click on the top left where you see `Projects:`, make sure it has selected setup and chromium. You can enable the tests for firefox and webkit if you like, but we only support chromium tests. 
+1. Click on the top left where you see `Projects:`, make sure it has selected setup and chromium. Here, you should enable the tests that you want to try ONLY ENABLE ONE SUIT AT AT A TIME. For example, if you want to enable V4 tests, you have to selecte V4 & setupV4. The same goes for V5 tests. If this isn't enabled it WILL NOT WORK.
 #### Step 1
 ![image1](./images/step%201%20playwright.png)
 #### Step 2
