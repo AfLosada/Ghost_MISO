@@ -174,19 +174,6 @@ const login = async function (driver) {
 
 // TAG SECTION
 
-When('I sign in', async function () {
-  await singup(this.driver)
-})
-
-When('I log in', async function () {
-  const singupAvailble = !(await(this.driver.$('#setup')).error)
-  if (singupAvailble){
-    await singup(this.driver)
-    return
-  }
-  await login(this.driver)
-})
-
 When('I click on tags', async function () {
   await this.driver.$('a[href="#/tags/"]').click()
 })
