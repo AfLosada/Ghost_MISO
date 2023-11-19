@@ -4,7 +4,7 @@
 
 - node 18.18.x
 - FRESH ghost install. If you don't have it please follow the guide found [here](../../README.md)
-- There should be **NO** draft pages, if there are pages in the draft state, please publish them manually or do a clean ghost install.
+- There should be **NO** nor **Scheduled** draft pages, if there are pages in the draft state, please publish them manually or do a clean ghost install.
 
 ## Testing version 5 
 ### Steps to run the tests

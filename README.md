@@ -4,7 +4,7 @@ This repo contains a package json to install ghost, please follow the instructio
 
 ## Requirements
 
-- node 18.18.x
+- node 18.18.2
 
 ## Steps 
 1. `mkdir local`
@@ -23,8 +23,8 @@ This repo contains a package json to install ghost, please follow the instructio
 ## Miembros del equipo
 - Eduardo Benito Castro - e.benito@uniandes.edu.co
 - Andres Felie Losada - af.losada@uniandes.edu.co
-- Jhon Goyes
-- Andres pelaez Gaviria
+- Jhon Goyes - j.goyesg@uniandes.edu.co
+- Andres pelaez Gaviria - j.pelaezg@uniandes.edu.co
 
 You should use this credentials in ghost:
 - email: nedrocoli@gmail.com
