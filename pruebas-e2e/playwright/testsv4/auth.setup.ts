@@ -36,4 +36,6 @@ const login = async ({ page }) => {
   await page.getByPlaceholder('At least 10 characters').click();
   await page.getByPlaceholder('At least 10 characters').fill('12345678910');
   await page.getByRole('button', { name: 'Create account & start publishing →' }).click();
+  await page.waitForURL("http://3.15.201.251/ghost/#/setup/done")
+  await page.goto("http://3.15.201.251/ghost/")
 }
