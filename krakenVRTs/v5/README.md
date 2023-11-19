@@ -12,6 +12,11 @@ Login and all of the following features:
 3. Publish page
 4. Schedule page
 5. Unschedule page
+6. Create a new tag
+7. Create a new internal tag
+8. Delete a tag
+9. Edit a tag
+10. Validar color nuevo tag
 
 Credentials:
 - username: nedrocoli@gmail.com
