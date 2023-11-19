@@ -174,8 +174,6 @@ const login = async function (driver) {
 
 // TAG SECTION
 
-
-
 When('I click on tags', async function () {
   await this.driver.$('a[href="#/tags/"]').click()
 })

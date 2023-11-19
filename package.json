@@ -6,10 +6,11 @@
   "scripts": {
     "cypress": "cypress open",
     "ghost:s": "ghost -v",
-    "ghost:install": "cd local && ghost install local",
+    "ghost:install": "cd local && ghost install v5.74.0 --local",
     "ghost:start": "cd local && ghost start --no-setup-linux-user",
     "ghost:doctor": "cd local && ghost doctor --no-setup-linux-user",
     "ghost:uninstall": "cd local && ghost uninstall --no-setup-linux-user",
+    "ghost:stop": "cd local && ghost stop --no-setup-linux-user",
     "ghost:setup": "cd local && ghost setup --no-setup-linux-user",
     "playwright": "node index.js"
   },

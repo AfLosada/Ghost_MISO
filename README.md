@@ -7,18 +7,18 @@ This repo contains a package json to install ghost, please follow the instructio
 - node 18.18.x
 
 ## Steps 
-
-1. `npm install`
+1. `mkdir local`
+2. `npm install`
   1.1. If you want to retry the tests from scratch you can run `npm run ghost:uninstall` 
-2. `npm run ghost:install`
-3. `npm run ghost:start`
+3. `npm run ghost:install`. If the install fails, it is probably because you haven't configured the tools ghost requires to install, or because the local folder is not empty. For the first one you would have to debug and understand why ghost isn't installing. For the second, you should delete ALL of the contents of the local folder.
+4. `npm run ghost:start`
 
 ## Tests
 
-- [Playwright](./pruebas-e2e/playwright/README.md)
-- [Cyptess - posts](./pruebas-e2e/cypress/readme.md)
-- [Cyptess - tags](./cypress/e2e/ghost_testing.cy.js)
-- [Kraken](./kraken/README.md)
+- [Playwright](./pruebas-e2e/playwright/README.md) 5 scenarios
+- [Cyptess - posts](./pruebas-e2e/cypress/readme.md) 5 scenarios
+- [Cyptess - tags](./cypress/e2e/ghost_testing.cy.js) 5 scenarios
+- [Kraken](./kraken/README.md) 20 scenarios
 
 ## Miembros del equipo
 - Eduardo Benito Castro - e.benito@uniandes.edu.co
