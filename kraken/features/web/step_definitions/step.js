@@ -208,11 +208,17 @@ When('I click save', async function () {
 When('I enter new correo {kraken-string}', async function(text) {
   let element = await this.driver.$('input[value="nedrocoli@gmail.com"]');
   
-  await element.click(); // Hacer clic en el campo para asegurarse de que esté seleccionado
+  
+  await element.click();
 
-  // Seleccione todo el texto en el campo de entrada y presione la tecla "Delete" para borrar
-  await element.keys(['Control', 'a']); // Seleccionar todo el texto
-  await element.keys(['Delete']); // Borrar el texto seleccionado
+  // Obtener el valor actual del campo
+  const currentValue = await element.getValue();
+
+  // Retroceder carácter por carácter y borrar el texto
+  for (let i = 0; i < currentValue.length; i++) {
+    await element.keys(['Backspace']);
+  }
+
   return await element.setValue(text);
 })
 

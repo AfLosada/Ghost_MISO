@@ -1,0 +1,2 @@
+nombre de usuario actualizado y correo del usuario
+nombre de usuario actualizado , correo del usuario y slug del usuario
