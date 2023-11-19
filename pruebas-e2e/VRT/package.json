@@ -1,0 +1,16 @@
+{
+  "name": "vrt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backstop:init": "backstop init",
+    "backstop:test": "backstop test",
+    "backstop:approve": "backstop approve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backstopjs": "^6.2.2"
+  }
+}
