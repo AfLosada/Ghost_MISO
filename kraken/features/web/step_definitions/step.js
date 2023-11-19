@@ -181,3 +181,42 @@ When('I click on tags', async function () {
 When('I create a new page', async function () {
   await this.driver.$('a[href="#/tags/new/"]').click()
 })
+
+//Funcionalidad editar perfil 
+
+When('I click iconoPersonal', async function() {
+  let element = await this.driver.$('.gh-user-avatar.relative');
+  return await element.click();
+})
+
+When('I click your profile', async function () {
+  let element = await this.driver.$('[data-test-nav="user-profile"]');
+  return await element.click();
+})
+
+When('I enter name actualizado {kraken-string}', async function (text) {
+  let element = await this.driver.$('input[value="Grupo 5"]');
+  return await element.setValue(text);
+})
+
+
+When('I click save', async function () {
+  let element = await this.driver.$('button.cursor-pointer.bg-black');
+  return await element.click();
+})
+
+When('I enter new correo {kraken-string}', async function(text) {
+  let element = await this.driver.$('input[value="nedrocoli@gmail.com"]');
+  
+  await element.click(); // Hacer clic en el campo para asegurarse de que esté seleccionado
+
+  // Seleccione todo el texto en el campo de entrada y presione la tecla "Delete" para borrar
+  await element.keys(['Control', 'a']); // Seleccionar todo el texto
+  await element.keys(['Delete']); // Borrar el texto seleccionado
+  return await element.setValue(text);
+})
+
+When('I enter new slug {kraken-string}', async function(text) {
+  let element = await this.driver.$('input[value="grupo"]');
+  return await element.setValue(text);
+})
