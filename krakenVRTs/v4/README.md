@@ -2,6 +2,16 @@
 
 We are using a EC2 instance that hosts the version 4.45.0 of GHOST. This is the link [http://3.15.201.251/ghost/](http://3.15.201.251/ghost/).
 
+## Features
+
+Login and all of the following features:
+
+1. Create page
+2. Edit page
+3. Publish page
+4. Schedule page
+5. Unschedule page
+
 Credentials:
 - username: nedrocoli@gmail.com
 - password: 122345678910
