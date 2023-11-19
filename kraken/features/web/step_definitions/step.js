@@ -177,7 +177,7 @@ When('I click on tags', async function () {
   await this.driver.$('a[href="#/tags/"]').click()
 })
 
-When('I create a new page', async function () {
+When('I create a new tag', async function () {
   await this.driver.$('a[href="#/tags/new/"]').click()
 })
 
