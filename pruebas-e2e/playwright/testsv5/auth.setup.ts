@@ -14,6 +14,7 @@ setup("authenticate", async ({ page }) => {
   await page.goto("http://localhost:2368/ghost/#/signin");
   await page.getByLabel("Email Address").fill("nedrocoli@gmail.com");
   await page.getByLabel("Password").fill("12345678910");
+  await page.screenshot({ path: 'testv5/login.png', fullPage: true });
   await page.waitForTimeout(100);
   await page.getByRole("button", { name: "Sign in" }).click();
   await page.waitForSelector("body > div.gh-app > div > nav.gh-nav");

@@ -5,12 +5,16 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
     page,
   }) => {
     await page.goto("http://localhost:2368/ghost");
+    await page.screenshot({ path: 'testv5/main-page.png', fullPage: true });
     await page.getByRole("link", { name: "Pages", exact: true }).click();
+    await page.screenshot({ path: 'testv5/pages.png', fullPage: true });
     await page.getByRole("link", { name: "New page" }).click();
+    await page.screenshot({ path: 'testv5/new-page.png', fullPage: true });
     await page.getByPlaceholder("Page title").click();
     await page.getByPlaceholder("Page title").fill("asereje");
     await page.getByRole("paragraph").click();
     await page.getByLabel("Add a card").click();
+    await page.screenshot({ path: 'testv5/card-menu.png', fullPage: true });
     await page
       .locator("ul > li > button[data-kg-card-menu-item=Markdown] ")
       .click();
@@ -20,6 +24,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
     await page.getByTitle("Italic (Ctrl-I)").click();
     await page.getByRole("textbox").nth(2).fill("ooooo");
     await page.locator(".CodeMirror-scroll").click();
+    await page.screenshot({ path: 'testv5/edit-page.png', fullPage: true });
     await page.getByRole("link", { name: "Pages" }).click();
     await page
       .locator(
@@ -45,6 +50,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
     await page.getByPlaceholder("Page title").click();
     await page.getByPlaceholder("Page title").fill("asereje 1");
     await page.getByRole("link", { name: "Pages" }).click();
+    await page.screenshot({ path: 'testv5/edited-page-list.png', fullPage: true });
     await page
       .locator(
         "body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li:first-child > a",
@@ -70,18 +76,22 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
       )
       .click();
     await page.getByRole("button", { name: "Publish" }).click();
+    await page.screenshot({ path: 'testv5/publish-page-click.png', fullPage: true });
     await page
       .getByRole("button", { name: "Continue, final review →" })
       .click();
+    await page.screenshot({ path: 'testv5/finish-publish-page.png', fullPage: true });
     await page
       .getByRole("button", { name: "Publish page, right now" })
       .click({ force: true });
     await page.getByRole("button", { name: "Back to editor" }).click();
     await page.getByRole("link", { name: "Pages" }).click();
     await page.getByRole("button", { name: "All pages" }).click();
+    await page.screenshot({ path: 'testv5/filter-pages-menu.png', fullPage: true });
     await page
       .getByRole("option", { name: "Published pages" })
       .click({ force: true });
+    await page.screenshot({ path: 'testv5/published-pages.png', fullPage: true });
     expect(
       page.getByRole("link", { name: /asereje .* last published/ })
     ).toBeTruthy();
@@ -97,25 +107,30 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
         { hasText: /asereje/ }
       )
       .click();
+      await page.screenshot({ path: 'testv5/published-page.png', fullPage: true });
       await page.getByRole("button", { name: "Unpublish" }).click();
       await page
         .getByRole("button", { name: "Unpublish and" })
         .click();
+    await page.screenshot({ path: 'testv5/unpublish-page.png', fullPage: true });
     await page.getByRole("button", { name: "Publish", exact: true }).click();
     await page.getByRole("button", { name: "Right now" }).click();
     await page.getByText("Schedule for later").click();
     await page
       .getByRole("button", { name: "Continue, final review →" })
       .click();
+    await page.screenshot({ path: 'testv5/schedule-page.png', fullPage: true });
     await page
       .getByRole("button", { name: /Publish page, .*/ })
       .click({ force: true });
+    await page.screenshot({ path: 'testv5/schedule-page-success.png', fullPage: true });
     await page.getByRole("button", { name: "Editor" }).click();
     await page.getByRole("link", { name: "Pages" }).click();
     await page.getByRole("link", { name: "Scheduled", exact: true }).click();
     await page.getByRole("link", { name: "Pages" }).click();
     await page.getByRole("button", { name: "All pages" }).click();
     await page.getByRole("option", { name: "Scheduled pages" }).click();
+    await page.screenshot({ path: 'testv5/scheduled-pages.png', fullPage: true });
     expect(page.getByRole("link", { name: /asereje .*/ })).toBeTruthy();
   });
 
@@ -129,11 +144,14 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
         { hasText: /asereje/ }
       )
       .click();
+    await page.screenshot({ path: 'testv5/scheduled-page-edit.png', fullPage: true });
     await page.getByRole("button", { name: "Unschedule" }).click();
     await page
       .getByRole("button", { name: "Unschedule and revert to draft →" })
       .click();
+    await page.screenshot({ path: 'testv5/unschedule-page.png', fullPage: true });
     await page.getByRole("link", { name: "Pages" }).click();
+    await page.screenshot({ path: 'testv5/unschedule-pages.png', fullPage: true });
     expect(
       page.getByRole("heading", { name: "No pages match the current filter" })
     ).toBeTruthy();

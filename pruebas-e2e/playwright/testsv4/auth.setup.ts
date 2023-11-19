@@ -13,6 +13,7 @@ setup("authenticate", async ({ page }) => {
   await page.goto("http://3.15.201.251/ghost/#/signin");
   await page.getByPlaceholder('jamie@example.com').fill("nedrocoli@gmail.com");
   await page.getByPlaceholder('•••••••••••••••').fill("12345678910");
+  await page.screenshot({ path: 'testv4/login.png', fullPage: true });
   await page.waitForTimeout(100);
   await page.getByRole("button", { name: "Sign in" }).click();
   await page.waitForSelector("body > div.gh-app > div > nav.gh-nav");
