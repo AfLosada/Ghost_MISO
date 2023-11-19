@@ -9,6 +9,12 @@
 // ***********************************************
 //
 //
+Cypress.Commands.add("login", (email, password) => {
+    cy.visit('http://localhost:2368/ghost/#/signin') // Visita la página de inicio de sesión
+    cy.get('input[name=identification]').type(email) // Ingresa el correo electrónico en el campo correspondiente
+    cy.get('input[name=password]').type(password) // Ingresa la contraseña en el campo correspondiente
+    cy.get('button[type=submit]').click() // Haz clic en el botón de inicio de sesión
+  })
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
