@@ -247,6 +247,7 @@ Then('I return to tags', async function() {
 })
 
 
+
 //Funcionalidad editar perfil 
 
 When('I click iconoPersonal', async function() {

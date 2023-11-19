@@ -24,17 +24,17 @@ When('I create a new page', async function () {
 })
 
 Then('I put on the title {string}', async function (title){
-  await this.driver.$('section > div.gh-koenig-editor.relative.z-0 > div.gh-koenig-editor-pane.flex.flex-column.mih-100 > div.gh-editor-title-container.page-improvements').setValue(title)
+  await this.driver.$("textarea[placeholder='Page title']").setValue(title)
 })
 Then('I update the title {string}', async function (title){
-  await this.driver.$('.gh-editor-title.ember-text-area.gh-input.ember-view').setValue(title)
+  await this.driver.$("textarea[placeholder='Page title']").setValue(title)
 })
 
 When('I create a markdown card and fill it with {string}', async function (content){
-  await this.driver.$('section > div.gh-koenig-editor.relative.z-0 > div.gh-koenig-editor-pane.flex.flex-column.mih-100 > div:nth-child(3) > div > div > div:nth-child(1)').click()
-  await this.driver.$('section > div.gh-koenig-editor.relative.z-0 > div.gh-koenig-editor-pane.flex.flex-column.mih-100 > div:nth-child(3) > div > div > div.absolute.z-50 > div > button').click()
-  await this.driver.$('section > div.gh-koenig-editor.relative.z-0 > div.gh-koenig-editor-pane.flex.flex-column.mih-100 > div:nth-child(3) > div > div > div.absolute.z-50 > div > ul > li:nth-child(1) > ul > li:nth-child(2)').click()
-  await this.driver.$('section > div.gh-koenig-editor.relative.z-0 > div.gh-koenig-editor-pane.flex.flex-column.mih-100 > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div > div > div.CodeMirror.cm-s-paper.CodeMirror-wrap > div.CodeMirror-scroll > div').setValue(content)
+  await this.driver.$('div[data-placeholder="Begin writing your page..."]').click()
+  await this.driver.$('button[aria-label="Add a card"]').click()
+  await this.driver.$('div[title="Markdown"]').click()
+  await this.driver.$('div.CodeMirror-code').setValue(content)
 })
 
 Then('I return to pages', async function() {
@@ -46,34 +46,26 @@ Then('I return to editor', async function() {
 })
 
 When('I click on edit for the first page', async function() {
-  await this.driver.$('body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li > a').click()
-})
-
-Then('I edit the markdown of the page by putting the {string}', async function(content) {
-  const markdown = this.driver.$('section > div.gh-koenig-editor.relative.z-0 > div.gh-koenig-editor-pane.flex.flex-column.mih-100 > div:nth-child(3) > div > div > div:nth-child(1) > div > div')
-  await markdown.click()
-  const editorButton = this.driver.$('section > div.gh-koenig-editor.relative.z-0 > div.gh-koenig-editor-pane.flex.flex-column.mih-100 > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div > ul > li:nth-child(1)')
-  await editorButton.click()
-  await this.driver.$('section > div > div > div:nth-child(3) > div > div > div:nth-child(1) > div > div > div > div > div > div.CodeMirror.cm-s-paper.CodeMirror-wrap > div.CodeMirror-scroll > div').setValue(content)
+  await this.driver.$('li.gh-list-row.gh-posts-list-item > a').click()
 })
 
 Then('I publish the page', async function () {
-  await this.driver.$('section > header > section > button.gh-btn.gh-btn-editor.darkgrey.gh-publish-trigger').click()
-  await this.driver.$('div > div > div > div.gh-publish-cta > button').click()
-  await this.driver.$('div > div > div.gh-publish-cta > button').click()
+  await this.driver.$('div.gh-publishmenu > div').click()
+  await this.driver.$('button.gh-publishmenu-button').click()
 })
 
 Then('I schedule a {string} to publish', async function (_) {
-  await this.driver.$('section > header > section > button.gh-btn.gh-btn-editor.darkgrey.gh-publish-trigger').click()
-  await this.driver.$('div > div > div > div.gh-publish-settings > div.gh-publish-setting.last > button').click()
-  await this.driver.$('div > div > fieldset > div > div:nth-child(2)').click()
-  await this.driver.$('div > div > div > div.gh-publish-cta > button').click()
-  await this.driver.$('div > div > div.gh-publish-cta > button').click()
+  await this.driver.$('div.gh-publishmenu > div').click()
+  await this.driver.$('div:nth-child(2) > div.gh-publishmenu-radio-button').click()
+  await this.driver.$('button.gh-publishmenu-button').click()
 })
 
 Then('I unschedule the page', async function () {
-  await this.driver.$('section > header > section > button.gh-btn.gh-btn-editor.darkgrey.gh-unpublish-trigger').click()
-  await this.driver.$('div > div > div > div.gh-publish-confirmation > p > button').click()
+  await this.driver.$('div.gh-publishmenu > div').click()
+  await this.driver.$('div:nth-child(1) > div.gh-publishmenu-radio-button').click()
+  await this.driver.$('button.gh-publishmenu-button').click()
+  await Promise.resolve(resolve => setTimeout(resolve, 1000))
+  await this.driver.$('button.gh-publishmenu-button').click()
 })
 
 Then('I filter by published pages', async function() {
@@ -166,8 +158,8 @@ const singup = async function (driver) {
 }
 
 const login = async function (driver) {
-  await driver.$('#identification').setValue("nedrocoli@gmail.com")
-  await driver.$('#password').setValue("12345678910")
+  await driver.$('input[name="identification"]').setValue("nedrocoli@gmail.com")
+  await driver.$('input[name="password"]').setValue("12345678910")
   await driver.$('button.login').click()
 }
 
@@ -245,8 +237,6 @@ Then('I click on save', async function(){
 Then('I return to tags', async function() {
   await this.driver.$('a[href="#/tags/"]').click()
 })
-
-
 //Funcionalidad editar perfil 
 
 When('I click iconoPersonal', async function() {
