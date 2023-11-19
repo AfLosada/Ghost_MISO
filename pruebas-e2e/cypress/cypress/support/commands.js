@@ -15,6 +15,10 @@ Cypress.Commands.add("login", (email, password) => {
     cy.get('input[name=password]').type(password) // Ingresa la contraseña en el campo correspondiente
     cy.get('button[type=submit]').click() // Haz clic en el botón de inicio de sesión
   })
+
+Cypress.Screenshot.defaults({
+  screenshotOnRunFailure: false // Evita que tome capturas en caso de fallos
+});
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
