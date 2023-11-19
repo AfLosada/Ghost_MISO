@@ -4,7 +4,7 @@ This repo contains a package json to install ghost, please follow the instructio
 
 ## Requirements
 
-- node 18.18.x
+- node 18.18.2
 
 ## Steps 
 1. `mkdir local`
