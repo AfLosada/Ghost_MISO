@@ -155,7 +155,6 @@ When('I delete the post', async function (){
   await this.driver.$(".gh-btn.gh-btn-red.gh-btn-icon.ember-view").click()
 })
 
-
 // LOGIN UTILITIES
 
 const singup = async function (driver) {

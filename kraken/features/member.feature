@@ -2,7 +2,7 @@ Feature: Cambiar informacion personal
 
 @user1 @web
 Scenario: Como primer usuario quiero actualizar el nombre del usuario
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
   And I wait for 2 seconds
   And I click iconoPersonal
@@ -18,7 +18,7 @@ Scenario: Como primer usuario quiero actualizar el nombre del usuario
 
 @user2 @web
 Scenario: Como primer usuario quiero actualizar el nombre y correo del usuario
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
   And I wait for 2 seconds
   And I click iconoPersonal
@@ -36,7 +36,7 @@ Scenario: Como primer usuario quiero actualizar el nombre y correo del usuario
 
 @user3 @web
 Scenario: Como primer usuario quiero actualizar el nombre, correo y slug del usuario
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
   And I wait for 2 seconds
   And I click iconoPersonal
@@ -58,7 +58,7 @@ Scenario: Como primer usuario quiero actualizar el nombre, correo y slug del usu
 
 @user4 @web
 Scenario: Como primer usuario quiero actualizar el nombre, correo y slug del usuario con valores vacios
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
   And I wait for 2 seconds
   And I click iconoPersonal
