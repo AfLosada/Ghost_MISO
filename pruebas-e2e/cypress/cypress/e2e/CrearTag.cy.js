@@ -9,7 +9,7 @@ describe('Crear tag', () => {
       cy.wait(2000)
       cy.get('#tag-description').type('Se crea un tag de prueba para validar la funcionalidad')
       cy.wait(2000)
-      cy.get('#ember57 > span').click()
+      cy.get('.gh-btn.gh-btn-primary.gh-btn-icon.ember-view').click()
       //cy.get('button[class="gh-btn gh-btn-blue gh-btn-icon ember-view"]').click()
       cy.wait(2000)
       cy.get('li:has(a[href="#/tags/"])').click()
