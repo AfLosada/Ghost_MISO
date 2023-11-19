@@ -66,4 +66,5 @@ Scenario: Dejar de programar una página para publicacion
   Then I unschedule the page
   And I wait for 1 seconds
   Then I navigate to page "http://3.15.201.251/ghost/#/pages"
+  And I wait for 1 seconds
   Then I filter by scheduled pages

@@ -1,0 +1,14 @@
+{
+  "name": "krakenvrts",
+  "version": "1.0.0",
+  "description": "VRTs to compare between different versions of tests written in kraken",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "resemblejs": "^5.0.0"
+  }
+}

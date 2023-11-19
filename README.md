@@ -15,6 +15,12 @@ This repo contains a package json to install ghost, please follow the instructio
 
 ## Tests
 
+### Visual Regression Tests
+
+- [Kraken](./krakenVRTs/README.md)
+- [Playwright](./pruebas-e2e/playwright/README.md)
+
+### End to End tests
 - [Playwright](./pruebas-e2e/playwright/README.md) 5 scenarios
 - [Cyptess - posts](./pruebas-e2e/cypress/readme.md) 5 scenarios
 - [Cyptess - tags](./cypress/e2e/ghost_testing.cy.js) 5 scenarios

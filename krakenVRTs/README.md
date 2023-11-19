@@ -30,6 +30,8 @@ Credentials:
 
 ## Features
 
+
+#### End to End tests
 Guide to run pages feature tests in kraken
 
 1. Navigate to the folder of the test you want to run and use to obtain screenshots. If you want to test kraken V4, go to v4 and the same for V5. When you are inside the folder, run `npm install` and proceed to the next steps.
@@ -38,3 +40,8 @@ Guide to run pages feature tests in kraken
 4. Verify that it is running correctly
 5. If it isn't you can try debugging if something weird is going on with the kraken installation. 
 6. You could also try running the tests with your own kraken configuration, to do this, just run `kraken-node run` in this folder.
+
+#### Visual Regression Tests
+
+1. `npm install` in this folder.
+2. `npm run start` which should 
