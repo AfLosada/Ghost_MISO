@@ -4,7 +4,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
   test("GIVEN I can log in the page, WHEN I create a page and add the markdown card THEN it is saved into this new page", async ({
     page,
   }) => {
-    await page.goto("http://localhost:2368/ghost");
+    await page.goto("http://3.138.112.48/ghost/ghost");
     await page.screenshot({ path: 'testv5/main-page.png', fullPage: true });
     await page.getByRole("link", { name: "Pages", exact: true }).click();
     await page.screenshot({ path: 'testv5/pages.png', fullPage: true });
@@ -40,7 +40,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
   test("GIVEN I can log in AND I have created a page WHEN I edit it THEN the edition is persisted and saved", async ({
     page,
   }) => {
-    await page.goto("http://localhost:2368/ghost/#/pages");
+    await page.goto("http://3.138.112.48/ghost/#/pages");
     await page
       .locator(
         "body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li:first-child > a",
@@ -68,7 +68,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
   test("GIVEN I can log in AND I have create a page WHEN I publish one page immediately THEN I can check if it is published", async ({
     page,
   }) => {
-    await page.goto("http://localhost:2368/ghost/#/pages");
+    await page.goto("http://3.138.112.48/ghost/#/pages");
     await page
       .locator(
         "body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li:first-child",
@@ -86,7 +86,9 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
       .click({ force: true });
     await page.getByRole("button", { name: "Back to editor" }).click();
     await page.getByRole("link", { name: "Pages" }).click();
+    await page.waitForTimeout(1000)
     await page.getByRole("button", { name: "All pages" }).click();
+    await page.waitForTimeout(1000)
     await page.screenshot({ path: 'testv5/filter-pages-menu.png', fullPage: true });
     await page
       .getByRole("option", { name: "Published pages" })
@@ -100,7 +102,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
   test("GIVEN I can log in AND I have created a page WHEN I publish one page I can schedule THEN I check if it is scheduled", async ({
     page,
   }) => {
-    await page.goto("http://localhost:2368/ghost/#/pages");
+    await page.goto("http://3.138.112.48/ghost/#/pages");
     await page
       .locator(
         "body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li:first-child",
@@ -126,9 +128,9 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
     await page.screenshot({ path: 'testv5/schedule-page-success.png', fullPage: true });
     await page.getByRole("button", { name: "Editor" }).click();
     await page.getByRole("link", { name: "Pages" }).click();
-    await page.getByRole("link", { name: "Scheduled", exact: true }).click();
-    await page.getByRole("link", { name: "Pages" }).click();
-    await page.getByRole("button", { name: "All pages" }).click();
+    await page.waitForTimeout(1000)
+    await page.getByRole("button", { name: "pages" }).click();
+    await page.waitForTimeout(1000)
     await page.getByRole("option", { name: "Scheduled pages" }).click();
     await page.screenshot({ path: 'testv5/scheduled-pages.png', fullPage: true });
     expect(page.getByRole("link", { name: /asereje .*/ })).toBeTruthy();
@@ -137,7 +139,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
   test("GIVEN I can log in AND I have created and scheduled a page WHEN I unscheduled it THEN there are not scheduled pages", async ({
     page,
   }) => {
-    await page.goto("http://localhost:2368/ghost/#/pages");
+    await page.goto("http://3.138.112.48/ghost/#/pages");
     await page
       .locator(
         "body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li:first-child",
@@ -146,11 +148,17 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
       .click();
     await page.screenshot({ path: 'testv5/scheduled-page-edit.png', fullPage: true });
     await page.getByRole("button", { name: "Unschedule" }).click();
+    await page.waitForTimeout(1000)
     await page
       .getByRole("button", { name: "Unschedule and revert to draft →" })
       .click();
     await page.screenshot({ path: 'testv5/unschedule-page.png', fullPage: true });
+    await page.waitForTimeout(1000)
     await page.getByRole("link", { name: "Pages" }).click();
+    await page.waitForTimeout(1000)
+    await page.getByRole("button", { name: "pages" }).click();
+    await page.waitForTimeout(1000)
+    await page.getByRole("option", { name: "Scheduled pages" }).click();
     await page.screenshot({ path: 'testv5/unschedule-pages.png', fullPage: true });
     expect(
       page.getByRole("heading", { name: "No pages match the current filter" })
