@@ -5,7 +5,7 @@
 describe('Crear pages con datos vacios', () => {
     it('Debe permitir crear un page con titulo "sin titulo" ', () => {
       cy.login('nedrocoli@gmail.com', '12345678910')
-      cy.visit("http://localhost:2368/ghost/#/pages")
+      cy.visit("/")
       cy.get("a[href='#/editor/page/']").click()
       cy.get('textarea.gh-editor-title').type(" ")
       cy.get('p').type(" ")
@@ -18,7 +18,7 @@ describe('Crear pages con datos vacios', () => {
   describe('Crear pages con titulo y sin cuerpo', () => {
     it('Debe permitir crear un page con titulo y sin cuerpo ', () => {
       cy.login('nedrocoli@gmail.com', '12345678910')
-      cy.visit("http://localhost:2368/ghost/#/pages")
+      cy.visit("/")
       cy.get("a[href='#/editor/page/']").click()
       cy.get('textarea.gh-editor-title').type("Page1")
       cy.get('p').type(" ")
@@ -31,7 +31,7 @@ describe('Crear pages con datos vacios', () => {
   describe('Crear pages con cuerpo y sin titulo', () => {
     it('Debe permitir crear un page con cuerpo y sin titulo', () => {
       cy.login('nedrocoli@gmail.com', '12345678910')
-      cy.visit("http://localhost:2368/ghost/#/pages")
+      cy.visit("/")
       cy.get("a[href='#/editor/page/']").click()
       cy.get('textarea.gh-editor-title').type(" ")
       cy.get('p').type("cuerpo de la pagina ")
@@ -43,7 +43,7 @@ describe('Crear pages con datos vacios', () => {
   describe('Crear pages completo', () => {
     it('Debe permitir crear una page con datos completos ', () => {
       cy.login('nedrocoli@gmail.com', '12345678910')
-      cy.visit("http://localhost:2368/ghost/#/pages")
+      cy.visit("/")
       cy.get("a[href='#/editor/page/']").click()
       cy.get('textarea.gh-editor-title').type("Page1")
       cy.get('p').type("cuerpo de la pagina ")
