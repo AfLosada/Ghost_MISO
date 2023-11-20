@@ -19,7 +19,7 @@ const getNewestDirectory = (directoryPath) => {
 
 const readFilesFromDirectory = (directoryPath) => {
   const newestDirectory = getNewestDirectory(directoryPath);
-  const screenshots = path.join(newestDirectory, "screenshots");
+  const screenshots = path.join(newestDirectory, "");
   if (!newestDirectory) {
     return;
   }
@@ -74,29 +74,40 @@ const createComparison = (fileResult, { v4, v5 }, i) => {
 };
 
 const main = async () => {
-  const v4Path = "./v4/reports";
-  const v5Path = "./v5/reports";
-  const v4Files = readFilesFromDirectory(v4Path);
-  const v5Files = readFilesFromDirectory(v5Path);
+  const v4Path = "./v4/screenshots";
+  const v5Path = "./v5/screenshots";
+  
+  const v4Files = fs.readdirSync(v4Path).map(item =>  v4Path + '/' + item)
+  const v5Files = fs.readdirSync(v5Path).map(item =>  v5Path + '/' + item)
+
   for (const i in Array(Math.min(v4Files.length, v5Files.length)).fill(0)) {
-    const v4Url = v4Files[i];
-    const v5Url = v5Files[i];
-    const v4Img = fs.readFileSync(v4Url);
-    const v5Img = fs.readFileSync(v5Url);
-    const fileResult = `compare-${i}.png`;
-    resemblejs.compare(v4Img, v5Img, (err, data) => {
-      if (err) {
-        console.log(err);
-      } else {
-        fs.writeFileSync("./resemble-report/" + fileResult, data.getBuffer());
+    const v4Url = fs.readdirSync(v4Files[i]).map(item =>  v4Files[i] + '/' + item) ;
+    const v5Url = fs.readdirSync(v5Files[i]).map(item =>  v5Files[i] + '/' + item) ;
+
+    if(v4Url.length == v5Url.length){
+      console.log('Comparando: ')
+      console.log(v5Files[i])
+      console.log(v4Files[i])
+      for (var j = 0; j < v5Url.length; j++) {
+        const v4Img = fs.readFileSync(v4Url[j]);
+        const v5Img = fs.readFileSync(v5Url[j]);
+        const compareName = v4Url[j].split('/')[4].split('.')[0]
+        const fileResult = `compare-${compareName}.png`;
+        resemblejs.compare(v4Img, v5Img, (err, data) => {
+          fs.writeFileSync("./resemble-report/" + fileResult, data.getBuffer());
+        });
+        const v4FromReport = path.relative("resemble-report", v4Url[j])
+        const v5FromReport = path.relative("resemble-report", v5Url[j])
+        const report = createReport("./" + fileResult, { v4: v4FromReport, v5: v5FromReport }, j);
+        fs.writeFileSync(`./resemble-report/report-${compareName}.html`, report);
+        }
+        fs.copyFileSync('./resemble.css', `./resemble-report/resemble.css`);
+
       }
-    });
-    const v4FromReport = path.relative("resemble-report", v4Url)
-    const v5FromReport = path.relative("resemble-report", v5Url)
-    const report = createReport("./" + fileResult, { v4: v4FromReport, v5: v5FromReport }, i);
-    fs.writeFileSync(`./resemble-report/report-${i}.html`, report);
-  }
-  fs.copyFileSync('./resemble.css', `./resemble-report/resemble.css`);
+
+    
+    }
+
 };
 
 (async () => await main())();
