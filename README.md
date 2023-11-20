@@ -4,7 +4,8 @@ This repo contains a package json to install ghost, please follow the instructio
 
 ## Requirements
 
-- node 18.18.2
+- node 18.18.2 for playwright and ghost
+- node 16.20.2 for kraken
 
 ### Ghost install Steps 
 1. `mkdir local`
