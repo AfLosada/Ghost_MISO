@@ -54,11 +54,12 @@ Scenario: Programar una página para publicacion
   Then I return to pages
   And I wait for 1 seconds
   Then I filter by scheduled pages
+  And I wait for 1 seconds
   Then I send a signal to user 5 containing "schedule page complete"
 
 @user5 @web
 Scenario: Dejar de programar una página para publicacion
-  And I wait for a signal containing "schedule page complete" for 30 seconds
+  And I wait for a signal containing "schedule page complete" for 60 seconds
   Given I navigate to page "http://3.15.201.251/ghost/#/pages"
   When I log in
   Then I filter by scheduled pages

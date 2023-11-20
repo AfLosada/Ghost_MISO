@@ -10,7 +10,7 @@ Credentials:
 
 - node 16.20.2
 - You need to be able to run kraken locally. Please try to install kraken by folliwing [this guide](https://thesoftwaredesignlab.github.io/AutTestingCodelabs/kraken-web-testing-tool/index.html#0).
-- For the pages tests to work properly make sure to check that there are **NO** draft pages.
+- For the pages tests to work properly make sure to check that there are **NO** draft pages nor scheduled.
 
 ## Features
 

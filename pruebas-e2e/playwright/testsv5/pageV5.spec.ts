@@ -4,7 +4,7 @@ test.describe("Funcionalidades sobre página: Create and Edit pages", () => {
   test("GIVEN I can log in the page, WHEN I create a page and add the markdown card THEN it is saved into this new page", async ({
     page,
   }) => {
-    await page.goto("http://3.138.112.48/ghost/ghost");
+    await page.goto("http://3.138.112.48/ghost");
     await page.screenshot({ path: 'testv5/main-page.png', fullPage: true });
     await page.getByRole("link", { name: "Pages", exact: true }).click();
     await page.screenshot({ path: 'testv5/pages.png', fullPage: true });
