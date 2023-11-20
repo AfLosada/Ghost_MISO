@@ -45,7 +45,7 @@ Scenario: Publicar una página
 
 @user4 @web
 Scenario: Programar una página para publicacion
-  And I wait for a signal containing "publish page complete" for 30 seconds
+  And I wait for a signal containing "publish page complete" for 60 seconds
   Given I navigate to page "http://3.138.112.48/ghost/#/pages"
   When I log in
   When I create a new page
@@ -60,7 +60,7 @@ Scenario: Programar una página para publicacion
 
 @user5 @web
 Scenario: Dejar de programar una página para publicacion
-  And I wait for a signal containing "schedule page complete" for 30 seconds
+  And I wait for a signal containing "schedule page complete" for 60 seconds
   Given I navigate to page "http://3.138.112.48/ghost/#/pages"
   When I log in
   Then I filter by scheduled pages

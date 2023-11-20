@@ -37,3 +37,4 @@ Guide to run pages feature tests in kraken
 4. Verify that it is running correctly
 5. If it isn't you can try debugging if something weird is going on with the kraken installation. 
 6. You could also try running the tests with your own kraken configuration, to do this, just run `kraken-node run` in this folder.
+7. Sometimes, because the kraken browser hasn't warmped up, tests seem to fail. If this happens be mindful and try to run the tests again being careful that there are NO **draft** or **scheduled** pages.
