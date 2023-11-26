@@ -1,8 +1,8 @@
 import { defineConfig, devices } from '@playwright/test'
 import { TestOptions } from './tests/page'
-import { apriori } from './tests-a-priori/apriori'
-import { readDynamicContent } from './test-dynamic-pool/dynamic-pool'
-
+import { apriori, aprioriEvil } from './tests-a-priori/apriori'
+import { readDynamicContent, readEvilDynamicContent } from './test-dynamic-pool/dynamic-pool'
+import { generateRandom, generateRandomEvil } from './test-random-scenario/random'
 
 /**
  * Read environment variables from file.
@@ -46,6 +46,46 @@ export default defineConfig<TestOptions>({
         ...devices['Desktop Chrome'],
         storageState: 'playwright/.auth/user.json',
         ...readDynamicContent(),
+      },
+      testMatch: '**/*.spec.ts',
+      dependencies: ['setup'],
+    },
+    {
+      name: 'random',
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: 'playwright/.auth/user.json',
+        ...generateRandom(),
+      },
+      testMatch: '**/*.spec.ts',
+      dependencies: ['setup'],
+    },
+    {
+      name: 'a-priori-evil',
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: 'playwright/.auth/user.json',
+        ...aprioriEvil(),
+      },
+      testMatch: '**/*.spec.ts',
+      dependencies: ['setup'],
+    },
+    {
+      name: 'dynamic-evil',
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: 'playwright/.auth/user.json',
+        ...readEvilDynamicContent(),
+      },
+      testMatch: '**/*.spec.ts',
+      dependencies: ['setup'],
+    },
+    {
+      name: 'random-evil',
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: 'playwright/.auth/user.json',
+        ...generateRandomEvil(),
       },
       testMatch: '**/*.spec.ts',
       dependencies: ['setup'],

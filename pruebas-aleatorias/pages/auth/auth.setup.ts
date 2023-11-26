@@ -6,13 +6,13 @@ const authFile = "playwright/.auth/user.json";
 setup("authenticate", async ({ page }) => {
   await dynamicSetup()
   // Perform authentication steps. Replace these actions with your own.
-  await page.goto("http://localhost:2368/ghost/")
+  await page.goto("http://3.138.112.48/ghost/")
   await page.waitForTimeout(1000)
-  if (page.url() === "http://localhost:2368/ghost/#/setup") {
+  if (page.url() === "http://3.138.112.48/ghost/#/setup") {
     await login({page})
     return
   }
-  await page.goto("http://localhost:2368/ghost/#/signin");
+  await page.goto("http://3.138.112.48/ghost/#/signin");
   await page.getByPlaceholder('jamie@example.com').fill("nedrocoli@gmail.com");
   await page.getByPlaceholder('•••••••••••••••').fill("12345678910");
   await page.screenshot({ path: 'testv4/login.png', fullPage: true });
@@ -24,8 +24,8 @@ setup("authenticate", async ({ page }) => {
 });
 
 const login = async ({ page }) => {
-  await page.goto('http://localhost:2368/ghost/');
-  await page.goto('http://localhost:2368/ghost/#/setup');
+  await page.goto('http://3.138.112.48/ghost/');
+  await page.goto('http://3.138.112.48/ghost/#/setup');
   await page.getByPlaceholder('The Daily Awesome').click();
   await page.getByPlaceholder('The Daily Awesome').fill('Title');
   await page.getByPlaceholder('Jamie Larson').click();
@@ -39,6 +39,6 @@ const login = async ({ page }) => {
   await page.getByPlaceholder('At least 10 characters').click();
   await page.getByPlaceholder('At least 10 characters').fill('12345678910');
   await page.getByRole('button', { name: 'Create account & start publishing →' }).click();
-  await page.waitForURL("http://localhost:2368/ghost/#/setup/done")
-  await page.goto("http://localhost:2368/ghost/")
+  await page.waitForURL("http://3.138.112.48/ghost/#/setup/done")
+  await page.goto("http://3.138.112.48/ghost/")
 }

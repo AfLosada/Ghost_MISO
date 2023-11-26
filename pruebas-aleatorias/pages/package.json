@@ -8,6 +8,7 @@
     "prepare": "node global-setup.js"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.3.1",
     "@playwright/test": "^1.39.0",
     "@types/node": "^20.9.0",
     "csv-parse": "^5.5.2"

@@ -7,7 +7,7 @@ test.describe('Funcionalidades sobre página: Create and Edit pages', () => {
     create_page_title,
     create_page_content,
   }) => {
-    await page.goto('http://localhost:2368/ghost')
+    await page.goto('http://3.138.112.48/ghost')
     await page.getByRole('link', { name: 'Pages', exact: true }).click()
     await page.getByRole('link', { name: 'New page' }).click()
     await page.getByPlaceholder('Page title').click()
@@ -33,7 +33,7 @@ test.describe('Funcionalidades sobre página: Create and Edit pages', () => {
     create_page_title,
     edit_page_title,
   }) => {
-    await page.goto('http://localhost:2368/ghost/#/pages')
+    await page.goto('http://3.138.112.48/ghost/#/pages')
     await page.getByRole('link', { name: create_page_title }).click()
     /* await page
         .locator('body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li > a', {
@@ -61,7 +61,7 @@ test.describe('Funcionalidades sobre página: Create and Edit pages', () => {
     edit_page_title,
     create_page_title
   }) => {
-    await page.goto('http://localhost:2368/ghost/#/pages')
+    await page.goto('http://3.138.112.48/ghost/#/pages')
     await page.getByRole('link', { name: edit_page_title })
       .click()
     await page.getByRole('button', { name: 'Publish' }).click()
@@ -81,7 +81,7 @@ test.describe('Funcionalidades sobre página: Create and Edit pages', () => {
     schedule_page_position,
     edit_page_title,
   }) => {
-    await page.goto('http://localhost:2368/ghost/#/pages')
+    await page.goto('http://3.138.112.48/ghost/#/pages')
     await page
       .locator(
         `body > div.gh-app > div > main > section > section > div > div:nth-child(${schedule_page_position}) > li`
@@ -107,7 +107,7 @@ test.describe('Funcionalidades sobre página: Create and Edit pages', () => {
     page,
     unschedule_page_position,
   }) => {
-    await page.goto('http://localhost:2368/ghost/#/pages')
+    await page.goto('http://3.138.112.48/ghost/#/pages')
     await page
       .locator(
         `body > div.gh-app > div > main > section > section > div > div:nth-child(${unschedule_page_position}) > li`
