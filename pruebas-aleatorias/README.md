@@ -27,5 +27,16 @@ You will find:
 For more details you can check [the README.md](./pages/README.md).
 
 ## Tags
+
+1. Positive create Tag
+2. Negative Create Tag
+3. Positive Create internal tag
+4. Negative create internal tag
+5. Positive Delete tag
+6. Negative Delete tag
+7. Positive Edit tag
+8. Negative Edit tag
+9. Positive Validar color
+10. Negative Validar color
 ## Members
 ## Posts
