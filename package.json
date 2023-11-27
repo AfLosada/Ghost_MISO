@@ -6,7 +6,7 @@
   "scripts": {
     "cypress": "cypress open",
     "ghost:s": "ghost -v",
-    "ghost:install": "cd local && ghost install v5.74.0 --local",
+    "ghost:install": "cd local && ghost install v5.68.0 --local",
     "ghost:start": "cd local && ghost start --no-setup-linux-user",
     "ghost:doctor": "cd local && ghost doctor --no-setup-linux-user",
     "ghost:uninstall": "cd local && ghost uninstall --no-setup-linux-user",

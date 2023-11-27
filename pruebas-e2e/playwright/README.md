@@ -15,6 +15,7 @@ URL: [http://3.138.112.48/ghost](http://3.138.112.48/ghost)
 1. Make sure you have installed a fresh version of ghost. If you want to follow this tutorial correctly, please follow the README.md in the root of this repository. If you have installed a version of ghost make SURE you uninstall it and reinstall it, as this tutorial has signup and login. [README.md](../../README.md)
 2. Make sure you are in the folder pruebas-e2e/playwright, the same one where this README.md lives.
 3. `npm install`
+4. `npx playwright install` to install playwrights browsers
 4. `npm run test:pages`
 5. Enable the tests you want to run, in this case it would be setupV5 & V5. Running them means clicking on the play button above the auth setup and the pagev5.
 6. **IMPORTANT** Tests will most likely fail the first time you run them, so please try running them again a second time. Before running them again, please try running the authentication before. This is because it is setting up the authentication and playwright preloads the pages when it is setting up the tests.  
