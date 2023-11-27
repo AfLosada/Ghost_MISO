@@ -1,7 +1,7 @@
 Feature: Posts
 
 @user1 @web
-Scenario: Change publish date of a post
+Scenario: Change the expert of a post
   Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
   And I wait for 1 seconds

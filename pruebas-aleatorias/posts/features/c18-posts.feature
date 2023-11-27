@@ -1,7 +1,7 @@
 Feature: Posts
 
 @user1 @web
-Scenario: Create a post change its facebook card and see its preview
+Scenario: Add code injection to the header of the post
   Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
   And I wait for 2 seconds

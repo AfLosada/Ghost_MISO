@@ -1,6 +1,6 @@
 Feature: Posts
 @user1 @web
-Scenario: Create post view preview and edit it 3 times using mockaroo data
+Scenario: Edit a post with mockaroo data
   Given I make a GET request to "https://my.api.mockaroo.com/post-content.json?key=35c2a170"
   Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
