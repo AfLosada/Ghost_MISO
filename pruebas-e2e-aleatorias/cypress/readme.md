@@ -4,20 +4,21 @@ Prerrequisitos:
 
 en primera parte, instalar la version mas reciente 5.45.1, con el comando ghost install --version 5.68.0 --local --force y crear una cuenta con las estas credenciales nedrocoli@gmail.com y contraseña 12345678910
 
-Posteriormente clonar este repositorio, instalar las dependencias con npm install, Luego ejecutar el comando cypress open, ya en la interfaz, cargar la carpeta del proyecto cypress con puebas e2e. y ejecutar las pruebas que se encuentre en el a carpeta cypress\e2e\testGhost V5, alli se encuentran 2 archivos, el de las pruebas aleatorias y apriori.
+Posteriormente clonar este repositorio, instalar las dependencias con npm install, Luego ejecutar el comando cypress open, ya en la interfaz, cargar la carpeta "pruebas-e2e-aleatorias". y ejecutar las pruebas que se encuentre en el a carpeta cypress\e2e\pruebasAleatorias  y cypress\e2e\pruebasApriori, alli se encuentran 2 archivos, el de las pruebas aleatorias y apriori.
 
-Nota\* hay casos de pruebas que dan error y se marcaron con un prefijo de "ISSUE:" dado que hay escenarios donde depende el caracter lo toma o no, sin embaro en la seccion de Issues se describe el porque suceden errores en la prueba. Issues
+Nota: hay casos de pruebas que dan error y se marcaron con un prefijo de "ISSUE:" dado que hay escenarios donde depende el caracter lo toma o no, sin embaro en la seccion de Issues se describe el porque suceden errores en la prueba. Issues
 
 Estrategia Datos Aleatorios
 
 Para la definición de los data pools se uso la librería @faker-js/faker, la cual genera cadenas de caractéres aleatorios y soporta los siguientes tipos.
 
-Name
-Number
-Email
-String
-String Date
-URL
+* Name
+* Number
+* Email
+* String
+* String Date
+* URL
+
 Con esta librería se generan datos en el momento de la ejecución de la prueba, de esta manera en los diferentes escenarios se generan cadenas de tipo texton numero, url, entre otras que permite ingresar datos en los escenarios de usuario, correo, descripciones, etc.
 
 Estrategia Datos A-priori
