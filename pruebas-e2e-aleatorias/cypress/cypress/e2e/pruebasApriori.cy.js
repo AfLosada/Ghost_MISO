@@ -289,3 +289,76 @@ describe('Crear pages', () => {
   
   })
   
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Test crear nuevo miembro (26 )
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+describe('Crear nuevo miembro', () => {
+  
+    it('Exito al crear un nuevo miembro del equipo', () => {
+        cy.login('nedrocoli@gmail.com', '12345678910')
+        cy.visit("http://localhost:2368/ghost/#/members")
+        cy.wait(1000)
+        cy.get('a[href="#/members/new/"]').contains("New member").click()
+        cy.get('#member-name').type(name)
+        cy.get('#member-email').type(email)
+        cy.get('.gh-member-label-input').type(label)
+        cy.get('#member-note').type(title)
+        cy.get('section.view-actions > button').click()
+        cy.wait(1000)
+        cy.get('.gh-member-details-attribution > p').should('contain',"Created")
+    })
+  
+  
+    it('Mensaje de error de nombre con mas de 191 caracteres', () => {
+      
+      cy.login('nedrocoli@gmail.com', '12345678910')
+      cy.visit("http://localhost:2368/ghost/#/members")
+      cy.wait(1000)
+      cy.get('a[href="#/members/new/"]').contains("New member").click()
+      cy.get('#member-name').type(name_300)
+      cy.get('#member-email').type(email)
+      cy.get('.gh-member-label-input').type(label)
+      cy.get('#member-note').type(title)
+      cy.get('section.view-actions > button').click()
+      cy.wait(1000)
+      cy.get(':nth-child(1) > .response').should('contain',"Name cannot be longer than 191 characters.")
+  })
+   
+  
+  it('Mensaje de error con correo de mas de 260 caracteres', () => {
+      
+    cy.login('nedrocoli@gmail.com', '12345678910')
+    cy.visit("http://localhost:2368/ghost/#/members")
+    cy.wait(1000)
+    cy.get('a[href="#/members/new/"]').contains("New member").click()
+    cy.get('#member-name').type(name)
+    cy.get('#member-email').type(email_260)
+    cy.get('.gh-member-label-input').type(label)
+    cy.get('#member-note').type(title)
+    cy.get('section.view-actions > button').click()
+    cy.wait(1000)
+    cy.get('.error > .response').should('contain',"Email")
+  })
+  
+  it('Mensaje de error con Note de mas de 500 caracteres', () => {
+      
+    cy.login('nedrocoli@gmail.com', '12345678910')
+    cy.visit("http://localhost:2368/ghost/#/members")
+    cy.wait(1000)
+    cy.get('a[href="#/members/new/"]').contains("New member").click()
+    cy.get('#member-name').type(name)
+    cy.get('#member-email').type(email)
+    cy.get('.gh-member-label-input').type(label)
+    cy.get('#member-name').click()
+    cy.get('#member-note').type(texto_500)
+    cy.get('section.view-actions > button').click()
+    cy.wait(1000)
+    cy.get('.mb0 > .response').should('contain',"Note is too long")
+  })
+  
+  
+  })
+  
