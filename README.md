@@ -42,6 +42,10 @@ Login and all of the following features:
 
 Our preferred VRT is backdrop.js and we used it with the playwright tests. Please follow [this link](./pruebas-e2e/VRT/README.md) to run and see the results.
 
+### Data Generation
+
+Please navigate to [the following README.md](./pruebas-aleatorias/README.md)
+
 ## Team members
 - Eduardo Benito Castro - e.benito@uniandes.edu.co
 - Andres Felie Losada - af.losada@uniandes.edu.co
