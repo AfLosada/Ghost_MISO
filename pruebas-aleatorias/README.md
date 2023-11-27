@@ -40,7 +40,9 @@ For more details you can check [the README.md](./pages/README.md).
 10. Negative Validar color
 
 ## Members
+30 TEST
 
+For more details you can check [the_README.md](https://github.com/AfLosada/Ghost_MISO/blob/main/pruebas-e2e-aleatorias/cypress/readme.md)
 ## Posts
 
 30 tests.
