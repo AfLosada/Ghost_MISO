@@ -38,5 +38,13 @@ For more details you can check [the README.md](./pages/README.md).
 8. Negative Edit tag
 9. Positive Validar color
 10. Negative Validar color
+
 ## Members
+
 ## Posts
+
+30 tests.
+
+10 aprior, 10 dynamic, 10 random
+For more details you can check [the README.md](./posts/README.md).
+
