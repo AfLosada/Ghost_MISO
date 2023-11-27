@@ -1,6 +1,6 @@
 Feature: Posts
 @user4 @web
-Scenario: Create a draft post and then publish it with new content
+Scenario: Create a draft post and then publish it with new content dynamic 1
   Given I make a GET request to "https://my.api.mockaroo.com/naugty-post-content.json?key=35c2a170"
   Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
@@ -23,7 +23,7 @@ Scenario: Create a draft post and then publish it with new content
   Then I click on published posts
 
 @user1 @web
-Scenario: Create a draft post and then publish it with new content
+Scenario: Create a draft post and then publish it with new content dynamic 2
   Given I make a GET request to "https://my.api.mockaroo.com/post-content.json?key=35c2a170"
   Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in

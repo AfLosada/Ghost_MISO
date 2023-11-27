@@ -1,6 +1,6 @@
 Feature: Posts
 @user1 @web
-Scenario: Update the url of a post
+Scenario: Update the url of a post faker
   Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
   And I wait for 1 seconds

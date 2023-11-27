@@ -1,6 +1,6 @@
 Feature: Posts
 @user1 @web
-Scenario: Unplublish a post an shecdule it for later
+Scenario: Unplublish a post an shecdule it for later faker
   Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
   And I wait for 1 seconds

@@ -1,6 +1,6 @@
 Feature: Posts
 @user4 @web
-Scenario: Create a draft post and then publish it with new content
+Scenario: Create a draft post and then publish it with new content faker
   Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
   And I wait for 1 seconds

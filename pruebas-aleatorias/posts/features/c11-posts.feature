@@ -1,7 +1,7 @@
 Feature: Posts
 
 @user1 @web
-Scenario: Create a post, see its preview and publish it
+Scenario: Create a post, see its preview and publish it faker
   Given I navigate to page "http://3.138.112.48/ghost/"
   When I log in
   And I wait
