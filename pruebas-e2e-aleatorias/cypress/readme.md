@@ -1,3 +1,8 @@
+ESCENARIOS CON CYPRESS
+
+<img width="808" alt="image" src="https://github.com/AfLosada/Ghost_MISO/assets/94814368/3959660f-4544-4b18-93f8-f3b3f3c2962a">
+
+
 Instrucciones de ejecución Cypress
 
 Prerrequisitos:
