@@ -13,5 +13,3 @@ Scenario: Crear una página
   Then I return to pages
 
 
-
-

@@ -1,0 +1,18 @@
+{
+  "name": "kraken_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "kraken:run": "kraken-node run",
+    "kraken:gen": "kraken-node gen",
+    "kraken:doctor": "kraken-node doctor",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "appium": "^2.2.1",
+    "kraken-node": "^1.0.24"
+  }
+}
