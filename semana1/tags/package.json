@@ -1,0 +1,30 @@
+{
+  "name": "ghost",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "18.18.2 || 14.17.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "cypress": "cypress open",
+    "ghost:s": "ghost -v",
+    "ghost:installv5": "mkdir local && cd local && ghost install v5.68.0 --local",
+    "ghost:installv4": "mkdir local && cd local && ghost install v4.45.0 --local",
+    "ghost:start": "cd local && ghost start --no-setup-linux-user",
+    "ghost:doctor": "cd local && ghost doctor --no-setup-linux-user",
+    "ghost:uninstall": "cd local && ghost uninstall --no-setup-linux-user",
+    "ghost:stop": "cd local && ghost stop --no-setup-linux-user",
+    "ghost:setup": "cd local && ghost setup --no-setup-linux-user",
+    "playwright": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ghost-cli": "^1.25.3",
+    "playwright": "^1.39.0"
+  },
+  "devDependencies": {
+    "cypress": "^13.5.0"
+  }
+}
