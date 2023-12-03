@@ -8,7 +8,7 @@ We are using an EC2 instance that hosts the version 5.68.0 of GHOST. This is the
 
 Make sure you can login to both with the given credentials.
 
-You can also test this locally.
+You can also test this locally by following the instructions in [here](../README.md)
 
 ## Features
 
