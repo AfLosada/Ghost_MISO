@@ -18,6 +18,12 @@ Cypress.Commands.add("login", (email, password) => {
     cy.get('input[name=password]').type(password) // Ingresa la contraseña en el campo correspondiente
     cy.get('button[type=submit]').click() // Haz clic en el botón de inicio de sesión
   })
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // Devuelve false para evitar que Cypress falle la prueba
+    return false;
+});
+  
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

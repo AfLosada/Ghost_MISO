@@ -13,6 +13,20 @@ describe('Crear nuevo miembro', () => {
       cy.get('.gh-member-details-attribution > p').should('contain',"Created")
     })
 
+    it('No debe permitir crear un nuevo miembro con un correo ya usado anteriormente', () => {
+      cy.login('nedrocoli@gmail.com', '12345678910')
+      cy.visit("http://localhost:2368/ghost/#/members")
+      cy.wait(1000)
+      cy.get('#ember41 > :nth-child(1)').click()
+      cy.get('#member-name').type('tester3')
+      cy.get('#member-email').type('tester3@gmail.com')
+      cy.get('.gh-member-label-input').type('prueba 1')
+      cy.get('#member-note').type('Prueba 1')
+      cy.get('section.view-actions > button').click()
+      cy.wait(1000)
+      cy.get('.response').should('contain',"Member already exists.")
+    })
+
     it('ISSUE: No debe permitir crear un nuevo miembro con el campo vacio de nombre', () => {
       cy.login('nedrocoli@gmail.com', '12345678910')
       cy.visit("http://localhost:2368/ghost/#/members")
