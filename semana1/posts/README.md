@@ -1,7 +1,7 @@
 # Guide
 
 We are using a EC2 instance that hosts the version 4.45.0 of GHOST. This is the link [http://3.15.201.251/ghost/](http://3.15.201.251/ghost/).
-
+We are using an EC2 instance that hosts the version 5.68.0 of GHOST. This is the link [http://3.138.112.48/ghost](http://3.138.112.48/ghost).
 
 ## Features
 
