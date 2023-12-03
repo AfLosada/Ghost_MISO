@@ -23,3 +23,4 @@ Dentro de las pruebas aleatorias se plantearon los escenarios :
 7.  Test creacion de nuevos miembros
 8.  Edicion de miembro con credenciales invalidas
 
+Nota: hay casos de pruebas que dan error y se marcaron con un prefijo de "ISSUE:" dado que hay escenarios donde depende el caracter lo toma o no, sin embaro en la seccion de Issues se describe el porque suceden errores en la prueba. Issues
