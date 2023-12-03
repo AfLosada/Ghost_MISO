@@ -8,15 +8,15 @@ We are using an EC2 instance that hosts the version 5.68.0 of GHOST. This is the
 
 Make sure you can login to both with the given credentials.
 
+You can also test this locally.
+
 ## Features
 
 Login and all of the following features:
 
-1. Create page
-2. Edit page
-3. Publish page
-4. Schedule page
-5. Unschedule page
+1. Create page with markdown
+2. Create page with feature image
+3. Create page with spotify embed
 
 Credentials:
 - username: nedrocoli@gmail.com
@@ -24,7 +24,7 @@ Credentials:
 
 ## Requirements
 
-- node 16.20.2
+- node 16.20.2 || 14.17.0
 - For the pages tests to work properly make sure to check that there are **NO** draft pages nor scheduled.
 
 #### End to End tests

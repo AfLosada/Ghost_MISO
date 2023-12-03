@@ -22,7 +22,7 @@ test.describe('Funcionalidades sobre página: Create pages', () => {
     await page.waitForTimeout(100)
     await page.getByRole('menuitem', { name: 'Markdown' }).waitFor()
     await page.getByRole('menuitem', { name: 'Markdown' }).click()
-    await page.waitForTimeout(10000)
+    await page.waitForTimeout(100)
     await page.locator('.CodeMirror-scroll').click()
     await page.getByTitle('Heading (Ctrl-H)').click()
     await page.locator('.CodeMirror-lines').pressSequentially('headeroooo')
@@ -89,6 +89,7 @@ test.describe('Funcionalidades sobre página: Create pages', () => {
     await page.getByPlaceholder('Page title').click()
     await page.getByPlaceholder('Page title').fill('Feature Image')
     await page.getByRole('button', { name: 'Add feature image' }).click()
+    await page.waitForSelector('img')
     await page.screenshot({
       path: 'testsv4/images-results/create-page/feature-image/create-feature-image-page.png',
       fullPage: true,

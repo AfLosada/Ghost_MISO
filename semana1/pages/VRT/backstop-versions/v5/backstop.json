@@ -10,24 +10,10 @@
   "onBeforeScript": "puppet/onBefore.js",
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
+    
     {
-      "label": "Crear Pagina Markdown",
-      "url": "../e2e/testsv5/images-results/card-menu.png",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
-    },
-    {
-      "label": "Crear Pagina Spotify",
-      "url": "../e2e/testsv5/images-results/card-menu.png",
+      "label": "Crear Pagina",
+      "url": "../e2e/testsv5/images-results/create-page/markdown-image/card-menu.png",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
@@ -42,7 +28,22 @@
     },
     {
       "label": "Crear Pagina Feature Image",
-      "url": "../e2e/testsv5/images-results/feature-image",
+      "url": "../e2e/testsv5/images-results/create-page/feature-image/create-feature-image-page.png",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Crear Pagina Spotify Embed",
+      "url": "../e2e/testsv5/images-results/create-page/spotify-embed/create-page-spotify-menu.png",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],

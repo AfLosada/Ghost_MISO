@@ -11,7 +11,7 @@ test.describe('Funcionalidades sobre página: Create pages', () => {
     await page.getByRole('link', { name: 'New page' }).click()
     await page.screenshot({ path: 'testsv5/images-results/create-page/markdown-image/new-page.png', fullPage: true })
     await page.getByPlaceholder('Page title').click()
-    await page.getByPlaceholder('Page title').fill('asereje')
+    await page.getByPlaceholder('Page title').fill('Markdown')
     await page.getByRole('paragraph').click()
     await page.getByLabel('Add a card').click()
     await page.screenshot({ path: 'testsv5/images-results/create-page/markdown-image/card-menu.png', fullPage: true })
@@ -26,7 +26,7 @@ test.describe('Funcionalidades sobre página: Create pages', () => {
     await page.getByRole('link', { name: 'Pages' }).click()
     await page
       .locator('body > div.gh-app > div > main > section > section > div > div:nth-child(1) > li:first-child > a', {
-        hasText: 'asereje',
+        hasText: 'Markdown',
       })
       .click()
     await page.screenshot({ path: 'testsv5/images-results/create-page/create-card-page-result.png', fullPage: true })
@@ -46,6 +46,7 @@ test.describe('Funcionalidades sobre página: Create pages', () => {
     await page.getByPlaceholder('Page title').click()
     await page.getByPlaceholder('Page title').fill('Feature Image')
     await page.getByRole('button', { name: 'Add feature image' }).click()
+    await page.waitForSelector('img')
     await page.screenshot({ path: 'testsv5/images-results/create-page/feature-image/create-feature-image-page.png', fullPage: true })
     await page.getByRole('link', { name: 'Pages' }).click()
     await page
