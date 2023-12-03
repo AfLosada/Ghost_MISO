@@ -1,0 +1,15 @@
+{
+  "name": "krakenvrts",
+  "version": "1.0.0",
+  "description": "VRTs to compare between different versions of tests written in kraken",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "resemble": "node resemble.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "resemblejs": "^5.0.0"
+  }
+}
