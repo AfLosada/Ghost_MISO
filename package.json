@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "faker": "^6.6.6",
     "ghost-cli": "^1.25.3",
     "kraken-node": "^1.0.24",
     "playwright": "^1.39.0"
