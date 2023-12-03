@@ -12,11 +12,10 @@ Make sure you can login to both with the given credentials.
 
 Login and all of the following features:
 
-1. Create page
-2. Edit page
-3. Publish page
-4. Schedule page
-5. Unschedule page
+1. Create tag
+2. Create internal tag
+3. Edit tag
+4. Delete tag
 
 Credentials:
 - username: nedrocoli@gmail.com
