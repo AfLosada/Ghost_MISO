@@ -12,7 +12,7 @@
   "scenarios": [
     {
       "label": "Crear Pagina",
-      "url": "../playwright/testv4/card-menu.png",
+      "url": "../e2e/testsv4/images-results/card-menu.png",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
@@ -27,7 +27,7 @@
     },
     {
       "label": "Editar Pagina",
-      "url": "../playwright/testv4/edit-page.png",
+      "url": "../e2e/testsv4/images-results/edit-page.png",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
@@ -42,7 +42,7 @@
     },
     {
       "label": "Editar Pagina",
-      "url": "../playwright/testv4/edit-page.png",
+      "url": "../e2e/testsv4/images-results/edit-page.png",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
@@ -57,7 +57,7 @@
     },
     {
       "label": "Publicar Pagina",
-      "url": "../playwright/testv4/publish-page-click.png",
+      "url": "../e2e/testsv4/images-results/publish-page-click.png",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
@@ -72,7 +72,7 @@
     },
     {
       "label": "Programar Pagina",
-      "url": "../playwright/testv4/schedule-page-success.png",
+      "url": "../e2e/testsv4/images-results/schedule-page-success.png",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
@@ -87,7 +87,7 @@
     },
     {
       "label": "DesProgramar Pagina",
-      "url": "../playwright/testv4/unschedule-page.png",
+      "url": "../e2e/testsv4/images-results/unschedule-page.png",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],

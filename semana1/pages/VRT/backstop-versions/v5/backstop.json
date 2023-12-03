@@ -11,8 +11,8 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "Crear Pagina",
-      "url": "../playwright/testv5/card-menu.png",
+      "label": "Crear Pagina Markdown",
+      "url": "../e2e/testsv5/images-results/card-menu.png",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
@@ -26,8 +26,8 @@
       "requireSameDimensions": true
     },
     {
-      "label": "Editar Pagina",
-      "url": "../playwright/testv5/edit-page.png",
+      "label": "Crear Pagina Spotify",
+      "url": "../e2e/testsv5/images-results/card-menu.png",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
@@ -41,53 +41,8 @@
       "requireSameDimensions": true
     },
     {
-      "label": "Editar Pagina",
-      "url": "../playwright/testv5/edit-page.png",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
-    },
-    {
-      "label": "Publicar Pagina",
-      "url": "../playwright/testv5/publish-page-click.png",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
-    },
-    {
-      "label": "Programar Pagina",
-      "url": "../playwright/testv5/schedule-page-success.png",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
-    },
-    {
-      "label": "DesProgramar Pagina",
-      "url": "../playwright/testv5/unschedule-page.png",
+      "label": "Crear Pagina Feature Image",
+      "url": "../e2e/testsv5/images-results/feature-image",
       "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
