@@ -2,7 +2,7 @@
 
 ## Requirements
 
-1. Node v18.18.2 to be able to install ghostv5 and playwright. YOu need to have version 14.17.0 to use ghost v4 locally.
+1. Node v18.18.2 to be able to install ghostv5 and playwright. You need to have version 14.17.0 to use ghost v4 locally.
 You can also use our amazon ec2 instances, but they are not encouraged as they are flaky due to their resources. 
 2. No folder called local inside pages in [this route](./pages)
 3. If you are unable to run the playwright tests you should try running this command to install its browsers `npx playwright install`
@@ -27,3 +27,11 @@ You can also use our amazon ec2 instances, but they are not encouraged as they a
     "password": "123475678910"
 }
 ```
+
+### Tests
+
+You will find the following tests in this folder
+
+1. [End to End](./e2e/README.md)
+1. [VRT](./VRT/README.md)
+1. [Data Generation](./data-generation/README.md)

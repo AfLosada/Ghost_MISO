@@ -73,43 +73,27 @@ For random scenarios, we configured two functions that use `fakerJs`. In them th
 4. `npx playwright install` to install playwrights browsers
 4. `npm run test:pages`
 5. Enable the tests you want to run. The tests are split like this: 
-   1. Create Page works: 
+   1. Create Page works with Markdown: 
       1. apriori
       2. dynamic
       3. random
-   2. Create Page Fails:
+   2. Create Page Fails with Markdown:
       1. apriori
       2. dynamic
       3. random
-   3. Edit Page Works: 
+   3. Edit Page Works with Spotify: 
       1. apriori
       2. dynamic
       3. random
-   2. Edit Page Fails:
+   2. Edit Page Fails with Spotify:
       1. apriori
       2. dynamic
       3. random
-   3. Publish Page Works: 
+   3. Publish Page Works with Feature-Image: 
       1. apriori
       2. dynamic
       3. random
-   2. Publish Page Fails:
-      1. apriori
-      2. dynamic
-      3. random
-   3. Schedule Page Works: 
-      1. apriori
-      2. dynamic
-      3. random
-   2. Schedule Page Fails:
-      1. apriori
-      2. dynamic
-      3. random
-   3. Unschedule Page Works: 
-      1. apriori
-      2. dynamic
-      3. random
-   2. Unschedule Page Fails:
+   2. Publish Page Fails with Feature-Image:
       1. apriori
       2. dynamic
       3. random
