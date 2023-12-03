@@ -1,0 +1,54 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Crear_Pagina_0_document_0_desktop.png",
+        "test": "..\\bitmaps_test\\20231202-193935\\backstop_default_Crear_Pagina_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_Crear_Pagina_0_document_0_desktop.png",
+        "label": "Crear Pagina",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "../e2e/testsv4/images-results/create-page/markdown-image/card-menu.png",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "error": "Reference file not found C:\\Users\\nedro\\miso\\Ghost_MISO\\semana1\\pages\\VRT\\backstop_data\\bitmaps_reference\\backstop_default_Crear_Pagina_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Crear_Pagina_Feature_Image_0_document_0_desktop.png",
+        "test": "..\\bitmaps_test\\20231202-193935\\backstop_default_Crear_Pagina_Feature_Image_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_Crear_Pagina_Feature_Image_0_document_0_desktop.png",
+        "label": "Crear Pagina Feature Image",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "../e2e/testsv4/images-results/create-page/feature-image/create-feature-image-page.png",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "error": "Reference file not found C:\\Users\\nedro\\miso\\Ghost_MISO\\semana1\\pages\\VRT\\backstop_data\\bitmaps_reference\\backstop_default_Crear_Pagina_Feature_Image_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Crear_Pagina_Spotify_Embed_0_document_0_desktop.png",
+        "test": "..\\bitmaps_test\\20231202-193935\\backstop_default_Crear_Pagina_Spotify_Embed_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_Crear_Pagina_Spotify_Embed_0_document_0_desktop.png",
+        "label": "Crear Pagina Spotify Embed",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "../e2e/testsv4/images-results/create-page/spotify-embed/create-page-spotify-menu.png",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "error": "Reference file not found C:\\Users\\nedro\\miso\\Ghost_MISO\\semana1\\pages\\VRT\\backstop_data\\bitmaps_reference\\backstop_default_Crear_Pagina_Spotify_Embed_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}
