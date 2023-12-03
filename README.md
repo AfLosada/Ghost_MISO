@@ -14,6 +14,10 @@ This repo contains a package json to install ghost, please follow the instructio
 3. `npm run ghost:install`. If the install fails, it is probably because you haven't configured the tools ghost requires to install, or because the local folder is not empty. For the first one you would have to debug and understand why ghost isn't installing. For the second, you should delete ALL of the contents of the local folder.
 4. `npm run ghost:start`
 
+## **SEMANA 8**
+
+[PLEASE FOLLOW THIS LINK](./semana1/README.md)
+
 ## Tests
 
 ### End to End tests
