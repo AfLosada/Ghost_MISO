@@ -5,10 +5,14 @@
 - node 18.18.x
 - FRESH ghost install. If you don't have it please follow the guide found [here](../../README.md)
 - There should be **NO** nor **Scheduled** draft pages, if there are pages in the draft state, please publish them manually in the version's respective URL.
+- If you are unable to run the playwright tests you should try running this command to install its browsers `npx playwright install`
+- The tests are configured to be ran locally
 
 ## Testing version 5 
 
 URL: [http://3.138.112.48/ghost](http://3.138.112.48/ghost)
+
+OR you can do it locally by following the instructions found [here](../README.md)
 
 ### Steps to run the tests
 
@@ -25,6 +29,8 @@ URL: [http://3.138.112.48/ghost](http://3.138.112.48/ghost)
 ## Testing version 4
 
 URL: [http://3.15.201.251/ghost](http://3.15.201.251/ghost)
+
+OR you can do it locally by following the instructions found [here](../README.md) (with node version 14.17.0)
 
 ### Steps to run the tests
 
